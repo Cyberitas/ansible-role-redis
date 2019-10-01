@@ -1,0 +1,58 @@
+{{ hash_no_edit_notice }})
+
+appendonly {{ redis_appendonly }}
+bind {{ redis_bind }}
+zset-max-ziplist-entries {{ redis_zset_max_ziplist_entries }}
+zset-max-ziplist-value {{ redis_zset_max_ziplist_value }}
+slave-serve-stale-data {{ redis_slave_serve_stale_data }}
+slave-priority {{ redis_slave_priority }}
+rdbchecksum {{ redis_rdbchecksum }}
+repl-diskless-sync {{ redis_repl_diskless_sync }}
+port {{ redis_port }}
+appendfsync {{ redis_appendfsync }}
+aof-rewrite-incremental-fsync {{ redis_aof_rewrite_incremental_fsync }}
+set-max-intset-entries {{ redis_set_max_intset_entries }}
+lua-time-limit {{ redis_lua_time_limit }}
+list-max-ziplist-size {{ redis_list_max_ziplist_size }}
+slowlog-max-len {{ redis_slowlog_max_len }}
+latency-monitor-threshold {{ redis_latency_monitor_threshold }}
+activerehashing {{ redis_activerehashing }}
+
+{% for item in redis_save %}
+save {{ item }}
+{% endfor %}
+
+hash-max-ziplist-entries {{ redis_hash_max_ziplist_entries }}
+list-compress-depth {{ redis_list_compress_depth }}
+pidfile {{ redis_pidfile }}
+auto-aof-rewrite-percentage {{ redis_auto_aof_rewrite_percentage }}
+hz {{ redis_hz }}
+repl-disable-tcp-nodelay {{ redis_repl_disable_tcp_nodelay }}
+dbfilename {{ redis_dbfilename }}
+slave-read-only {{ redis_slave_read_only }}
+
+{% for item in redis_client_output_buffer_limit %}
+client-output-buffer-limit {{ item }}
+{% endfor %}
+
+no-appendfsync-on-rewrite {{ redis_no_appendfsync_on_rewrite }}
+stop-writes-on-bgsave-error {{ redis_stop_writes_on_bgsave_error }}
+hash-max-ziplist-value {{ redis_hash_max_ziplist_value }}
+logfile {{ redis_logfile }}
+tcp-keepalive {{ redis_tcp_keepalive }}
+repl-diskless-sync-delay {{ redis_repl_diskless_sync_delay }}
+auto-aof-rewrite-min-size {{ redis_auto_aof_rewrite_min_size }}
+loglevel {{ redis_loglevel }}
+rdbcompression {{ redis_rdbcompression }}
+protected-mode {{ redis_protected_mode }}
+hll-sparse-max-bytes {{ redis_hll_sparse_max_bytes }}
+notify-keyspace-events {{ redis_notify_keyspace_events }}
+appendfilename {{ redis_appendfilename }}
+daemonize {{ redis_daemonize }}
+supervised {{ redis_supervised }}
+timeout {{ redis_timeout }}
+databases {{ redis_databases }}
+tcp-backlog {{ redis_tcp_backlog }}
+slowlog-log-slower-than {{ redis_slowlog_log_slower_than }}
+aof-load-truncated {{ redis_aof_load_truncated }}
+dir {{ redis_dir }}
