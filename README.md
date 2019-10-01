@@ -11,11 +11,8 @@ None.
 Role Variables
 --------------
 
-
-`
-
 Defualt variables for configuration (/defaults/main.yml):
-```aidl
+```
 redis_list_max_ziplist_size: -2
 redis_stop_writes_on_bgsave_error: yes
 redis_zset_max_ziplist_entries: 128
