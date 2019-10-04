@@ -72,21 +72,6 @@ redis_databases: 16
 
 The redis.conf.j2 template requires all of the above variables to exist.  By default they are declared  in /defaults/main.yml. Declaring  any of the default variables in host_vars, group_vars, or /var will override the default value.
 
-The redis.conf.j2 file requires an Ansible management warning message created for the variable:
-
-`hash_no_edit_notice:`
-
-Example message:
-
-```
-hash_no_edit_notice: |
-  ################################################################
-  #   DO NOT manually alter this file, it is managed by Ansible  #
-  #   ANY changes made manually to this file will be             #
-  #   automatically overwritten                                  #
-  ################################################################
-```
-
 Dependencies
 ------------
 
