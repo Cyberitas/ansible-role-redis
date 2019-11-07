@@ -82,7 +82,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: jhd3.ansible_role_redis }
+         - { role: cyberitas.ansible_role_redis }
 
 License
 -------
