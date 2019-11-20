@@ -1,5 +1,6 @@
 galaxy_info:
   author: James Dugger
+  role_name: redis
   description: Install Redis on RHEL/CentOS
   company: Cyberitas Technologies, LLC
   license: license (MIT)
